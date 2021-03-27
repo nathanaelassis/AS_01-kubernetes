@@ -9,8 +9,8 @@
 ```vi mysql.yml``` - Criando yml mysql </br>
 ```kubectl apply -f nginx.yml``` - Aplicando configuração </br>
 ```kubectl apply -f mysql.yml``` - Aplicando configuração </br>
-```kubectl get pods``` - Verificando PODs </br>
-```kubectl get svc``` - Verificando Serviço </br>
+```kubectl get pods``` - Listando PODs </br>
+```kubectl get svc``` - Listando Serviço </br>
 ```curl IPnginx:80``` - Verificando comunicação </br>
 ```kubectl exec -ti nomePodMySQL -- /bin/bash``` - Entrando no POD </br>
 ```mysql -u mysql -pmysql``` - Entrando no database </br>
