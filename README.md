@@ -1,5 +1,5 @@
 # AS_01 - Kubernetes
-- MySQl e NGINX
+- MySQL e NGINX
 
 ## Kubernetes on-line
 - https://www.katacoda.com/courses/kubernetes/playground
