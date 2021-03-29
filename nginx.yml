@@ -1,6 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  namespace: default
   labels:
     run: nginx
   name: nginx
@@ -24,30 +25,28 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  name: ingress-nginx
+  namespace: default
   labels:
     run: nginx
-  name: nginx
+    app.kubernetes.io/name: ingress-nginx
+    app.kubernetes.io/part-of: ingress-nginx
 spec:
+  type: LoadBalancer
   ports:
-  - port: 80
-    protocol: TCP
-    targetPort: 80
+    - name: http
+      port: 80
+      targetPort: 80
+      protocol: TCP
+    - name: https
+      port: 443
+      targetPort: 443
+      protocol: TCP
+    - name: proxie-tcp-mysql
+      port: 3306
+      targetPort: 3306
+      protocol: TCP
   selector:
-    run: nginx
-  type: NodePort  
----
-apiVersion: networking.k8s.io/v1beta1
-kind: Ingress
-metadata:
-  name: nginx-ingress
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
-spec:
-  rules:
-  - http:
-      paths:
-      - path: /testpath
-        pathType: Prefix
-        backend:
-          serviceName:
-          servicePort: 80
+    name: nginx
+    app.kubernetes.io/name: ingress-nginx
+    app.kubernetes.io/part-of: ingress-nginx
