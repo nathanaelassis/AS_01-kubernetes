@@ -14,3 +14,6 @@
 ```curl IPnginx:80``` - Verificando comunicação </br>
 ```kubectl exec -ti nomePodMySQL -- /bin/bash``` - Entrando no POD </br>
 ```mysql -u mysql -pmysql``` - Entrando no database </br>
+
+## kubectl Cheat Sheet
+- https://kubernetes.io/pt/docs/reference/kubectl/cheatsheet/
