@@ -2,10 +2,10 @@
 - MySQL e NGINX
 
 ## Kubernetes on-line
-- https://www.katacoda.com/courses/kubernetes/playground
+- https://www.katacoda.com/courses/kubernetes/playground </br>
 ou
 - https://labs.play-with-k8s.com/
-  * Instruções ([Play-With-k8s](https://github.com/nathanaelassis/Play-With-Kubernetes))
+  * <b>Instruções</b> ([Play-With-k8s](https://github.com/nathanaelassis/Play-With-Kubernetes))
   
 ## Comandos utilizados
 ```vi nginx.yml``` - Criando yml nginx </br>
