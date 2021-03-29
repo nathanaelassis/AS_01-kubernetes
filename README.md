@@ -3,6 +3,9 @@
 
 ## Kubernetes on-line
 - https://www.katacoda.com/courses/kubernetes/playground
+ou
+- https://labs.play-with-k8s.com/
+  * Instruções ([Play-With-k8s](https://github.com/nathanaelassis/Play-With-Kubernetes))
   
 ## Comandos utilizados
 ```vi nginx.yml``` - Criando yml nginx </br>
